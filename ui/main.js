@@ -21,6 +21,15 @@ function $$(selector) {
  *  Custom event module
 **/
 var Event = {
+
+  /**
+   *  Event.on(element, event, handler) -> undefined
+   *  Attaches and event listenter for `event` to `element`.
+   *
+   *  Example:
+   *
+   *      Event.on(window, "load", function(e) { console.log("Page has loaded."); });
+  **/
   on: function(element, event, handler) {
     element.addEventListener(event, handler, false);
   },
